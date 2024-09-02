@@ -1,14 +1,19 @@
 {
-  "title": "Ernie's Modern UI",
-  "description": "A visual update for Foundry VTT UI.",
-  "version": "0.5.8",
+  "title": "Morgan's Ernie's Modern UI",
+  "description": "A visual update for Foundry VTT UI, hacked for v11 by MOMO (cheese-dog)",
+  "version": "0.6.0",
   "authors": [
     {
       "name": "Ernie",
       "email": "teafortwo.ea@gmail.com",
       "url": "https://github.com/ernieayala",
       "flags": {}
-    }
+    },
+    {
+      "name": "Morgan",
+      "email": "mchessman42@gmail.com",
+      "url": "https://github.com/cheese-dog",
+      "flags": {}
   ],
   "styles": [
     "css/emu.css"
@@ -46,6 +51,6 @@
   "id": "ernies-modern-layout",
   "compatibility": {
     "minimum": "10.286",
-    "verified": "12"
+    "verified": "11"
   }
 }
