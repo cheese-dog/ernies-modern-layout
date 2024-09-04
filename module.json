@@ -42,14 +42,14 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/ernieayala/ernies-modern-layout",
+  "url": "https://github.com/cheese-dog/morgans-ernies-modern-layout",
   "manifest": "https://github.com/ernieayala/ernies-modern-layout/releases/download/0.5.7/module.json",
   "download": "https://github.com/ernieayala/ernies-modern-layout/releases/download/0.5.7/ernies-modern-layout.zip",
   "license": "MIT",
-  "readme": "https://github.com/ernieayala/ernies-modern-layout",
-  "bugs": "https://github.com/ernieayala/ernies-modern-layout/issues",
-  "changelog": "https://github.com/ernieayala/ernies-modern-layout/releases",
-  "id": "ernies-modern-layout",
+  "readme": "https://github.com/cheese-dog/morgans-ernies-modern-layout",
+  "bugs": "https://github.com/cheese-dog/morgans-ernies-modern-layout/issues",
+  "changelog": "https://github.com/cheese-dog/morgans-ernies-modern-layout/releases",
+  "id": "morgans-ernies-modern-layout",
   "compatibility": {
     "minimum": "10.286",
     "verified": "11"
