@@ -38,8 +38,10 @@ jobs:
     - name: 2b. Find and Replace ‘current’ with ‘new’ in package.json
       run: find . -name "package.json" -exec sed -i "s/${{ github.event.inputs.currentVersion }}/${{ github.event.inputs.newVersion }}/g" {} +
     - name: 3. Commit
-      run: git commit -m "Uptick to ${{ github.event.inputs.currentVersion}}"
-
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        git commit -m "Uptick to ${{ github.event.inputs.currentVersion}}"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
