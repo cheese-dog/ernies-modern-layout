@@ -1,4 +1,4 @@
-name: Update Repo & Release (wip)
+name: Uptick & Release (wip)
 
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Print the input tags to STDOUT
         run: echo The tags are ${{ inputs.tags }} 
-      - name: Update version numbers in repo
+      - name: Uptick version numbers in repo
         run: echo placeholder
       - name: Create files in release folder
         run: echo placeholder
