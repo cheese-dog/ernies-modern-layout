@@ -1,0 +1,53 @@
+# This is a basic workflow that is manually triggered
+name: Uptick & Release
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
+on:
+  workflow_dispatch:
+    inputs:
+      currentVersion:
+        description: ‘Current version (ex. 0.3.7)’
+        required: true
+      newVersion:
+        description: ‘New version (ex. 0.3.8)’
+        required: true
+      prerelease:
+        description: 'Set as a pre-release'
+        required: false
+        type: boolean
+        default: false
+      latest:
+        description: 'Set as the latest release'
+        required: true
+        type: boolean
+        default: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called “uptick-version”
+  uptick-version:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.VBMS_CID_SERVICE_ACTIONS }}
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: 1. Check out code
+      uses: actions/checkout@v2
+    - name: 2a. Find and Replace ‘currentVersion’ with ‘newVersion’ in module.json
+      run: find . -name "module.json" -exec sed -i "s/${{ github.event.inputs.currentVersion }}/${{ github.event.inputs.newVersion }}/g" {} +
+    - name: 2b. Find and Replace ‘current’ with ‘new’ in package.json
+      run: find . -name "package.json" -exec sed -i "s/${{ github.event.inputs.currentVersion }}/${{ github.event.inputs.newVersion }}/g" {} +
+    - name: 3. Commit
+      run: git commit -m "Uptick to ${{ github.event.inputs.currentVersion}}"
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.event.inputs.newVersion }}
+        release_name: Release ${{ github.event.inputs.newVersion }}
+        draft: false
+        prerelease: ${{ github.event.inputs.prerelease }}
+        latest: ${{ github.event.inputs.latest }}
