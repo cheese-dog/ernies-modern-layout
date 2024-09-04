@@ -1,12 +1,12 @@
 {
-	"author": "Ernie <teafortwo.ea@gmail.com>",
+	"author": "Morgan <mchessman42@gmail.com>",
 	"keywords": [
 		"layout",
 		"dnd",
 		"vtt",
 		"foundry"
 	],
-	"name": "Ernie",
+	"name": "Morgan",
 	"scripts": {
 		"watch": "sass scss:css --watch --style=expanded --no-source-map",
 		"build": "sass scss:css --no-source-map && cleancss --batch --batch-suffix \"\" css/*.css --format keep-breaks -O1 all:on,normalize:off && cleancss --batch --batch-suffix \"\" css/*/*.css --format keep-breaks -O1 all:on,normalize:off"
