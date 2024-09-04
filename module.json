@@ -1,7 +1,7 @@
 {
   "title": "Morgan's Ernie's Modern UI",
   "description": "A visual update for Foundry VTT UI, hacked for v11 by MOMO (cheese-dog)",
-  "version": "0.5.7",
+  "version": "0.6.3",
   "authors": [
     {
       "name": "Ernie",
@@ -43,8 +43,8 @@
     }
   ],
   "url": "https://github.com/cheese-dog/morgans-ernies-modern-layout",
-  "manifest": "https://github.com/ernieayala/ernies-modern-layout/releases/download/0.5.7/module.json",
-  "download": "https://github.com/ernieayala/ernies-modern-layout/releases/download/0.5.7/ernies-modern-layout.zip",
+  "manifest": "https://github.com/ernieayala/ernies-modern-layout/releases/download/0.6.3/module.json",
+  "download": "https://github.com/ernieayala/ernies-modern-layout/releases/download/0.6.3/ernies-modern-layout.zip",
   "license": "MIT",
   "readme": "https://github.com/cheese-dog/morgans-ernies-modern-layout",
   "bugs": "https://github.com/cheese-dog/morgans-ernies-modern-layout/issues",
