@@ -1,0 +1,17 @@
+on:
+  workflow_dispatch:
+    inputs:
+      releaseVersion:
+        description: 'Release Version'
+        required: true
+        type: string
+      prerelease:
+        description: 'Set as a pre-release'
+        required: false
+        type: boolean
+        default: false
+      latest:
+        description: 'Set as the latest release'
+        required: true
+        type: boolean
+        default: false
